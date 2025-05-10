@@ -3,8 +3,10 @@ body {
   background-color: #fdf6e3; /* soft cream / solarized light */
   color: #111;
   max-width: 700px;
-  margin: 0;
-  padding: 3 rem;
+  margin: 0 auto;
+  padding: 3rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
