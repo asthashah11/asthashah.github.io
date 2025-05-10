@@ -1,6 +1,6 @@
-/* Typography and page base */
+/* Typography and base styling */
 body {
-  font-family: 'Iowan Old Style', Georgia, serif;
+  font-family: 'Iowan Old Style', 'Palatino', 'Georgia', serif;
   background-color: #fdf6e3;
   color: #111;
   margin: 0;
@@ -14,21 +14,21 @@ body {
   margin: 0 auto;
 }
 
-/* Top row: name + social icons */
+/* Name + icons on one row */
 .top-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-/* Name styling */
+/* Name */
 h1 {
   font-size: 1.75rem;
   font-weight: normal;
   margin: 0;
 }
 
-/* Underline beneath name and icons */
+/* Divider line under name/icons */
 .divider {
   border: none;
   height: 1px;
@@ -36,7 +36,7 @@ h1 {
   margin: 0.5rem 0 1.5rem 0;
 }
 
-/* Social icons like Karpathy */
+/* Social icons */
 .social-icons {
   display: flex;
   gap: 0.5rem;
@@ -63,14 +63,20 @@ h1 {
 
 /* About paragraph */
 .about {
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  font-weight: 400;
   color: #333;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   max-width: 600px;
 }
 
-/* Optional muted link styling */
+.about p {
+  margin-bottom: 1.25rem;
+}
+
+/* Minimalist, faded link styling */
 a {
   color: inherit;
   text-decoration: none;
@@ -82,7 +88,7 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-/* Optional: class for softer subtitle if you bring it back */
+/* soft gray subtitle */
 .subtitle {
   font-size: 0.95rem;
   color: #666;
