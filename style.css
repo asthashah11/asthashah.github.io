@@ -123,3 +123,29 @@ a:hover {
   background-color: #111;
   color: #fff;
 }
+
+.paper-section {
+  margin-top: 3rem;
+}
+
+.paper-section h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  text-transform: lowercase;
+}
+
+.paper {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.paper a {
+  color: inherit;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.paper a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
