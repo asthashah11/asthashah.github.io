@@ -92,8 +92,12 @@
         const tag = button.dataset.tag;
 
         sections.forEach(section => {
-          const match = tag === 'all' || section.dataset.tag === tag;
-          section.style.display = tag === 'papers' ? (match ? 'block' : 'none') : (match ? 'grid' : 'none');
+          const isPaper = section.classList.contains('paper-section');
+          const match = tag === 'all'
+          ? !isPaper // don't show paper-section on "all"
+          : section.dataset.tag === tag;
+
+          section.style.display = match ? (section.classList.contains('card-grid') ? 'grid' : 'block') : 'none';
         });
       });
     });
