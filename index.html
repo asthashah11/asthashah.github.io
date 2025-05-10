@@ -8,6 +8,7 @@
 </head>
 <body>
   <div class="container">
+    <!-- Name and Socials -->
     <div class="top-row">
       <h1>Astha Shah</h1>
       <div class="social-icons">
@@ -17,35 +18,43 @@
         <a href="mailto:astha.shah@tufts.edu"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
+
     <hr class="divider">
+
+    <!-- About Text -->
     <p class="about">
       I study computer science at Tufts, and try to understand how humans and artificial agents learn at the 
       <a href="https://www.michaelchughes.com/" target="_blank">Hughes Lab</a>. Additionally, I support the 
       <a href="https://www.cs.tufts.edu/comp/15/index.html" target="_blank">data structures course</a> as a teaching assistant.                                                                                            
     </p>
+
     <!-- Filter Bar -->
     <div class="filter-bar">
-      <button class="filter-button active">highlights</button>
-      <button class="filter-button">papers</button>
-      <button class="filter-button">projects</button>
-      <button class="filter-button">thoughts</button>
-      <button class="filter-button">education</button>
-      <button class="filter-button">other</button>
-      <button class="filter-button">all</button>
+      <button class="filter-button active" data-tag="highlights">highlights</button>
+      <button class="filter-button" data-tag="papers">papers</button>
+      <button class="filter-button" data-tag="projects">projects</button>
+      <button class="filter-button" data-tag="thoughts">thoughts</button>
+      <button class="filter-button" data-tag="education">education</button>
+      <button class="filter-button" data-tag="other">other</button>
+      <button class="filter-button" data-tag="all">all</button>
     </div>
-    <div class="paper-section" id="papers">
-    <h2>papers</h2>
-    <div class="paper">
+
+    <!-- Papers Section -->
+    <div class="paper-section content-section" data-tag="papers" style="display: none;">
+      <h2>papers</h2>
+
+      <div class="paper">
         <p>
           <strong>
-          <a href="https://arxiv.org/abs/2503.15638" target="_blank">
-            Using machine learning to measure evidence of students' sensemaking in physics courses</strong><br>
-          </a>
+            <a href="https://arxiv.org/abs/2503.15638" target="_blank">
+              Using machine learning to measure evidence of students' sensemaking in physics courses
+            </a>
+          </strong><br>
           Kaitlin Gili, Kyle Heuton, <strong>Astha Shah</strong>, Michael C. Hughes<br>
           <em>arXiv preprint, 2024</em>
         </p>
       </div>
-    
+
       <div class="paper">
         <p>
           <strong>
@@ -59,10 +68,32 @@
       </div>
     </div>
 
-    <!-- (optional placeholder for card grid later) -->
-    <div class="card-grid">
+    <!-- Card Grid for Highlights (initially shown) -->
+    <div class="card-grid content-section" data-tag="highlights">
       <!-- cards will go here -->
     </div>
   </div>
+
+  <!-- JS for filter toggle -->
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const sections = document.querySelectorAll('.content-section');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Switch active class
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const tag = button.dataset.tag;
+
+        // Show matching sections
+        sections.forEach(section => {
+          const match = tag === 'all' || section.dataset.tag === tag;
+          section.style.display = match ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
