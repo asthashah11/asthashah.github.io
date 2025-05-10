@@ -97,13 +97,16 @@ a:hover {
 /* Filter Bar */
 .filter-bar {
   display: flex;
-  flex-wrap: nowrap; /* force one line */
-  overflow-x: auto;   /* optional: allow scroll on smaller screens */
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 0.5rem;
   margin: 3rem 0 2rem 0;
   padding-bottom: 0.5rem;
 }
 
+.filter-bar::-webkit-scrollbar {
+  display: none;
+}
 
 .filter-button {
   background: transparent;
@@ -124,6 +127,7 @@ a:hover {
   color: #fff;
 }
 
+/* Paper section */
 .paper-section {
   margin-top: 3rem;
 }
