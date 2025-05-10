@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+  <!-- Main Header and Bio -->
   <div class="container">
-    <!-- Name and Socials -->
     <div class="top-row">
       <h1>Astha Shah</h1>
       <div class="social-icons">
@@ -21,11 +22,10 @@
 
     <hr class="divider">
 
-    <!-- About Text -->
     <p class="about">
       I study computer science at Tufts, and try to understand how humans and artificial agents learn at the 
       <a href="https://www.michaelchughes.com/" target="_blank">Hughes Lab</a>. Additionally, I support the 
-      <a href="https://www.cs.tufts.edu/comp/15/index.html" target="_blank">data structures course</a> as a teaching assistant.                                                                                            
+      <a href="https://www.cs.tufts.edu/comp/15/index.html" target="_blank">data structures course</a> as a teaching assistant.
     </p>
 
     <!-- Filter Bar -->
@@ -41,6 +41,7 @@
 
     <!-- Papers Section -->
     <div class="paper-section content-section" data-tag="papers" style="display: none;">
+      <h2>papers</h2>
 
       <div class="paper">
         <p>
@@ -66,36 +67,37 @@
         </p>
       </div>
     </div>
-    
-    <!-- Card Grid for Highlights (initially shown) -->
-    <div class="card-grid content-section" data-tag="highlights">
-      <!-- cards will go here -->
+  </div> <!-- END .container -->
+
+  <!-- Card Grid (Projects Section) -->
+  <div class="card-grid content-section" data-tag="projects" style="display: none;">
+    <div class="card project">
+      <h3>Designing an Ethical AI Teaching Assistant</h3>
+      <p>
+        I collaborated with the MIT-IBM Watson AI Lab and peers to prototype an ethical AI teaching assistant that does not directly provide the answers to the students but nudges them towards the right direction.
+      </p>
+      <a href="https://example.com/slide-deck" target="_blank">View slide deck →</a>
     </div>
+    <!-- Add more cards here later -->
   </div>
 
-  <!--- Card grid for Projects --->
-  <div class="card project" data-tag="projects">
-  <h3>Designing an Ethical AI Teaching Assistant</h3>
-  <p>
-    I collaborated with the MIT-IBM Watson AI Lab and peers to prototype an ethical AI teaching assistant that does not directly provide the answers to the students but nudges them towards the right direction.
-  </p>
-  <a href="https://example.com/slide-deck" target="_blank">View slide deck →</a>
-</div>
+  <!-- Highlights Section (default shown) -->
+  <div class="card-grid content-section" data-tag="highlights">
+    <!-- You can add highlight cards here -->
+  </div>
 
-  <!-- JS for filter toggle -->
+  <!-- JavaScript for filter toggling -->
   <script>
     const filterButtons = document.querySelectorAll('.filter-button');
     const sections = document.querySelectorAll('.content-section');
 
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
-        // Switch active class
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
         const tag = button.dataset.tag;
 
-        // Show matching sections
         sections.forEach(section => {
           const match = tag === 'all' || section.dataset.tag === tag;
           section.style.display = match ? 'block' : 'none';
@@ -103,5 +105,6 @@
       });
     });
   </script>
+
 </body>
 </html>
