@@ -3,36 +3,37 @@ body {
   background-color: #fdf6e3;
   color: #111;
   margin: 0;
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Main layout box */
+/* Centered column */
 .container {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
-  text-align: left;
 }
 
-/* Name */
+/* Header section */
+header {
+  text-align: left; /* aligns text inside to the left */
+}
+
 h1 {
+  font-size: 2.25rem;
   font-weight: normal;
-  font-size: 2.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
-/* Underline */
 hr {
   border: none;
   height: 1px;
   background-color: #ccc;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
-/* Subtitle */
 .subtitle {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #666;
   margin-top: 0;
 }
