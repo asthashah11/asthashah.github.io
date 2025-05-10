@@ -198,3 +198,24 @@ a:hover {
   font-size: 0.95rem;
   line-height: 1.4;
 }
+
+.avatar-name {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name-centered {
+  font-size: 1.75rem;
+  font-weight: normal;
+  margin: 0 auto;
+  text-align: center;
+  flex: 1;
+}
