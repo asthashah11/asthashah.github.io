@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- Main Header and Bio -->
+  <!-- Header + Bio Section -->
   <div class="container">
     <div class="top-row">
       <h1>Astha Shah</h1>
@@ -67,26 +67,26 @@
         </p>
       </div>
     </div>
-  </div> <!-- END .container -->
+  </div> <!-- END container -->
 
-  <!-- Card Grid (Projects Section) -->
+  <!-- Project Cards Outside Container (Full Width) -->
   <div class="card-grid content-section" data-tag="projects" style="display: none;">
     <div class="card project">
       <h3>Designing an Ethical AI Teaching Assistant</h3>
       <p>
-        I collaborated with the MIT-IBM Watson AI Lab and peers to prototype an ethical AI teaching assistant that does not directly provide the answers to the students but nudges them towards the right direction.
+        I collaborated with the MIT-IBM Watson AI Lab and peers to prototype an ethical AI teaching assistant that does not directly provide the answers to students but nudges them toward the right direction.
       </p>
       <a href="https://example.com/slide-deck" target="_blank">View slide deck →</a>
     </div>
-    <!-- Add more cards here later -->
+    <!-- More cards can be added here -->
   </div>
 
-  <!-- Highlights Section (default shown) -->
+  <!-- Highlights Placeholder Section -->
   <div class="card-grid content-section" data-tag="highlights">
-    <!-- You can add highlight cards here -->
+    <!-- Add highlight cards here -->
   </div>
 
-  <!-- JavaScript for filter toggling -->
+  <!-- JavaScript for Filter Tabs -->
   <script>
     const filterButtons = document.querySelectorAll('.filter-button');
     const sections = document.querySelectorAll('.content-section');
@@ -100,8 +100,13 @@
 
         sections.forEach(section => {
           const match = tag === 'all' || section.dataset.tag === tag;
-          section.style.display = match ? 'block' : 'none';
+          section.style.display = match ? 'grid' : 'none';
         });
+
+        // Make paper section display:block instead of grid
+        if (tag === 'papers') {
+          document.querySelector('[data-tag="papers"]').style.display = 'block';
+        }
       });
     });
   </script>
