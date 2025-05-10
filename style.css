@@ -1,39 +1,28 @@
-body {
-  font-family: Georgia, serif;
-  background-color: #fdf6e3;
-  color: #111;
-  margin: 0;
-  padding: 4rem 1.5rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-/* Centered column */
-.container {
-  max-width: 650px;
-  margin: 0 auto;
-}
-
-/* Header section */
-header {
-  text-align: left; /* aligns text inside to the left */
-}
-
-h1 {
+.name h1 {
   font-size: 1.75rem;
   font-weight: normal;
   margin-bottom: 0.25rem;
 }
 
-hr {
-  border: none;
-  height: 1px;
-  background-color: #ccc;
-  margin: 0.5rem 0 0.5rem 0;
-}
-
-.subtitle {
+.name .subtitle {
   font-size: 0.95rem;
   color: #666;
   margin-top: 0;
+}
+
+.socials a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-left: 0.75rem;
+  color: #444;
+}
+
+.socials a:hover {
+  color: #000;
 }
