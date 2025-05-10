@@ -1,28 +1,38 @@
-.header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+body {
+  font-family: Georgia, serif;
+  background-color: #fdf6e3; /* soft cream */
+  color: #111;
+  margin: 0;
+  padding: 4rem 1.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.name h1 {
+/* Centered column */
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Name */
+h1 {
   font-size: 1.75rem;
   font-weight: normal;
   margin-bottom: 0.25rem;
 }
 
-.name .subtitle {
+/* Underline */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+/* Subtitle */
+.subtitle {
   font-size: 0.95rem;
   color: #666;
   margin-top: 0;
-}
-
-.socials a {
-  text-decoration: none;
-  font-size: 1.1rem;
-  margin-left: 0.75rem;
-  color: #444;
-}
-
-.socials a:hover {
-  color: #000;
 }
