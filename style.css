@@ -154,7 +154,6 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-/* Card Grid Layout */
 .card-grid {
   max-width: 960px;
   margin: 0 auto 4rem auto;
@@ -164,8 +163,6 @@ a:hover {
   gap: 1.5rem;
 }
 
-
-/* Responsive: 1 column on small screens */
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: 1fr;
