@@ -93,3 +93,30 @@ a:hover {
   font-size: 0.95rem;
   color: #666;
 }
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 3rem 0 2rem 0;
+}
+
+.filter-button {
+  background: transparent;
+  border: 1px solid #111;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-button:hover {
+  background-color: #eee;
+}
+
+.filter-button.active {
+  background-color: #111;
+  color: #fff;
+}
