@@ -1,9 +1,8 @@
 body {
   font-family: Georgia, serif;
-  background-color: #fdf6e3; /* soft cream / solarized light */
+  background-color: #fdf6e3; /* soft cream */
   color: #111;
-  max-width: 700px;
-  margin: 0 auto;
+  margin: 0;
   padding: 3rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,6 +12,5 @@ h1 {
   font-weight: normal;
   font-size: 2.75rem;
   margin: 0;
-  text-transform: lowercase;
   letter-spacing: 0.5px;
 }
