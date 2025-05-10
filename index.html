@@ -1,115 +1,200 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Astha Shah</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
+/* Typography and base styling */
+body {
+  font-family: 'Iowan Old Style', 'Palatino', 'Georgia', serif;
+  background-color: #fdf6e3;
+  color: #111;
+  margin: 0;
+  padding: 4rem 1.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  <!-- Header + Bio Section -->
-  <div class="container">
-    <div class="top-row">
-      <h1>Astha Shah</h1>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/asthashah8338/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/asthashah11" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://scholar.google.com/citations?hl=en&user=n4q77cYAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-        <a href="mailto:astha.shah@tufts.edu"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div>
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
 
-    <hr class="divider">
+/* Name + icons on one row */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
-    <p class="about">
-      I study computer science at Tufts, and try to understand how humans and artificial agents learn at the 
-      <a href="https://www.michaelchughes.com/" target="_blank">Hughes Lab</a>. Additionally, I support the 
-      <a href="https://www.cs.tufts.edu/comp/15/index.html" target="_blank">data structures course</a> as a teaching assistant.
-    </p>
+h1 {
+  font-size: 1.75rem;
+  font-weight: normal;
+  margin: 0;
+}
 
-    <!-- Filter Bar -->
-    <div class="filter-bar">
-      <button class="filter-button active" data-tag="highlights">highlights</button>
-      <button class="filter-button" data-tag="papers">papers</button>
-      <button class="filter-button" data-tag="projects">projects</button>
-      <button class="filter-button" data-tag="thoughts">thoughts</button>
-      <button class="filter-button" data-tag="education">education</button>
-      <button class="filter-button" data-tag="other">other</button>
-      <button class="filter-button" data-tag="all">all</button>
-    </div>
+/* Divider */
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #444;
+  margin: 0.5rem 0 1.5rem 0;
+}
 
-    <!-- Papers Section -->
-    <div class="paper-section content-section" data-tag="papers" style="display: none;">
-      <h2>papers</h2>
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
 
-      <div class="paper">
-        <p>
-          <strong>
-            <a href="https://arxiv.org/abs/2503.15638" target="_blank">
-              Using machine learning to measure evidence of students' sensemaking in physics courses
-            </a>
-          </strong><br>
-          Kaitlin Gili, Kyle Heuton, <strong>Astha Shah</strong>, Michael C. Hughes<br>
-          <em>arXiv preprint, 2024</em>
-        </p>
-      </div>
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
 
-      <div class="paper">
-        <p>
-          <strong>
-            <a href="https://ieeexplore.ieee.org/document/10937634" target="_blank">
-              Limited Data X-ray Computerized Tomography
-            </a>
-          </strong><br>
-          <strong>Astha Shah</strong>, Bayan Tuffaha<br>
-          <em>IEEE MIT Undergraduate Research Technology Conference (URTC), 2024, MIT, USA</em>
-        </p>
-      </div>
-    </div>
-  </div> <!-- END container -->
+.social-icons a:hover {
+  background-color: #333;
+}
 
-  <!-- Project Cards Outside Container (Full Width) -->
-  <div class="card-grid content-section" data-tag="projects" style="display: none;">
-    <div class="card project">
-      <h3>Designing an Ethical AI Teaching Assistant</h3>
-      <p>
-        I collaborated with the MIT-IBM Watson AI Lab and peers to prototype an ethical AI teaching assistant that does not directly provide the answers to students but nudges them toward the right direction.
-      </p>
-      <a href="https://example.com/slide-deck" target="_blank">View slide deck →</a>
-    </div>
-    <!-- More cards can be added here -->
-  </div>
+/* About section */
+.about {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  font-weight: 400;
+  color: #333;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
 
-  <!-- Highlights Placeholder Section -->
-  <div class="card-grid content-section" data-tag="highlights">
-    <!-- Add highlight cards here -->
-  </div>
+/* Link style */
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+  transition: border-bottom-color 0.2s ease;
+}
+a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
 
-  <!-- JavaScript for Filter Tabs -->
-  <script>
-    const filterButtons = document.querySelectorAll('.filter-button');
-    const sections = document.querySelectorAll('.content-section');
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0.5rem;
+  margin: 3rem 0 2rem 0;
+  padding-bottom: 0.5rem;
+}
 
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+.filter-bar::-webkit-scrollbar {
+  display: none;
+}
 
-        const tag = button.dataset.tag;
+.filter-button {
+  background: transparent;
+  border: 1px solid #111;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
 
-        sections.forEach(section => {
-          const match = tag === 'all' || section.dataset.tag === tag;
-          section.style.display = match ? 'grid' : 'none';
-        });
+.filter-button:hover {
+  background-color: #eee;
+}
 
-        // Make paper section display:block instead of grid
-        if (tag === 'papers') {
-          document.querySelector('[data-tag="papers"]').style.display = 'block';
-        }
-      });
-    });
-  </script>
+.filter-button.active {
+  background-color: #111;
+  color: #fff;
+}
 
-</body>
-</html>
+/* Papers */
+.paper-section {
+  margin-top: 3rem;
+}
+
+.paper-section h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  text-transform: lowercase;
+}
+
+.paper {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.paper a {
+  color: inherit;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+.paper a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Grid layout */
+.card-grid {
+  max-width: 960px;
+  margin: 0 auto 4rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Clickable minimalist cards */
+.grid-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #111;
+  padding: 1rem;
+  transition: box-shadow 0.2s ease;
+  background-color: #fdf6e3;
+}
+
+.grid-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.grid-card h3 {
+  margin: 0 0 0.25rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-card .star {
+  font-size: 1rem;
+  color: #111;
+}
+
+.grid-card .card-sub {
+  color: #999;
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem;
+}
+
+.grid-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
